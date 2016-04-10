@@ -1,6 +1,6 @@
 # StringJoiner
 
-Adds StringJoiner class providing simple functionality for joining strings, such that you don't need to worry about blanks, separators, symbols, nils etc. Has no dependecies. Requires Ruby 2.0 .
+Adds StringJoiner class providing simple functionality for joining strings, such that you don't need to worry about blanks, separators, symbols, nils etc. Has no (production) dependecies. Requires Ruby 2.0 .
 
 ## Installation
 
