@@ -26,6 +26,8 @@ Or install it yourself as:
 
 Also take a peek at tests.
 
+Note, that StringJoiner does not override String#concat nor String#+. You can monkey patch this if you wish (just delegating these two to <<) 
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
