@@ -31,6 +31,10 @@ class StringJoiner < String
 		super(@separator + str)
 	end
 
+	def to_s
+		String.new(self)
+	end
+
 end
 
 

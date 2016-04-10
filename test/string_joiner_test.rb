@@ -40,6 +40,11 @@ class StringJoinerTest < Minitest::Test
   	assert_equal @space_allow_blank_and_leading_separator << ' ' << :lala << "loves" << ' ' << 'me!' << nil << ' ', " , ,lala,loves, ,me!,, "
   end
 
+  def test_to_s
+  	assert_raises(TypeError) {@empty.to_s << ' ' << :lala << "loves" << ' ' << 'me!' << nil << ' '}
+  	assert_equal (@empty << ' ' << :lala << "loves").to_s << ' ' << 'me!' << ' ', "lala, loves me! "
+  end
+
   # def test_replace_with_space
   # 	# instance_variables.each {|v| v.relace(' ')}
 

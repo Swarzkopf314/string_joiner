@@ -1,6 +1,6 @@
 # StringJoiner
 
-Adds StringJoiner class providing simple functionality for joining strings, such that you don't need to worry about blanks, separators, symbols, nils etc. Has no (production) dependecies. Requires Ruby 2.0 .
+Adds StringJoiner class providing simple functionality for joining strings, such that you don't need to worry about blanks, separators, symbols, nils, TypeErrors etc. Has no (production) dependecies. Requires Ruby 2.0 .
 
 ## Installation
 
@@ -26,7 +26,8 @@ Or install it yourself as:
 
 Also take a peek at tests.
 
-Note, that StringJoiner does not override String#concat nor String#+. You can monkey patch this if you wish (just delegating these two to <<) 
+- If you want to convert your StringJoiner instance to a regular String, just call `to_s` on it.
+- Note, that StringJoiner does not override String#concat nor String#+. You can monkey patch this if you wish (just delegating these two to <<) 
 
 ## Development
 
