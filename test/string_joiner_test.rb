@@ -21,23 +21,23 @@ class StringJoinerTest < Minitest::Test
   end
 
   def test_default
-  	assert_equal @empty << ' ' << :ala << "ma" << ' ' << 'kota' << nil << ' ', "ala, ma, kota"
-  	assert_equal @space << ' ' << :ala << "ma" << ' ' << 'kota' << nil << ' ', "ala, ma, kota"
+  	assert_equal @empty << ' ' << :lala << "loves" << ' ' << 'me!' << nil << ' ', "lala, loves, me!"
+  	assert_equal @space << ' ' << :lala << "loves" << ' ' << 'me!' << nil << ' ', "lala, loves, me!"
   end
 
   def test_allow_leading_separators
-  	assert_equal @empty_leading_separator << ' ' << :ala << "ma" << ' ' << 'kota' << nil << ' ', ",ala,ma,kota"
-  	assert_equal @space_leading_separator << ' ' << :ala << "ma" << ' ' << 'kota' << nil << ' ', ",ala,ma,kota"
+  	assert_equal @empty_leading_separator << ' ' << :lala << "loves" << ' ' << 'me!' << nil << ' ', ",lala,loves,me!"
+  	assert_equal @space_leading_separator << ' ' << :lala << "loves" << ' ' << 'me!' << nil << ' ', ",lala,loves,me!"
   end
 
   def test_allow_blanks
-  	assert_equal @empty_allow_blanks << ' ' << :ala << "ma" << ' ' << 'kota' << nil << ' ', " ,ala,ma, ,kota,, "
-  	assert_equal @space_allow_blanks << ' ' << :ala << "ma" << ' ' << 'kota' << nil << ' ', " , ,ala,ma, ,kota,, "
+  	assert_equal @empty_allow_blanks << ' ' << :lala << "loves" << ' ' << 'me!' << nil << ' ', " ,lala,loves, ,me!,, "
+  	assert_equal @space_allow_blanks << ' ' << :lala << "loves" << ' ' << 'me!' << nil << ' ', " , ,lala,loves, ,me!,, "
   end
 
   def test_with_blanks_and_leading_separators
-  	assert_equal @empty_allow_blank_and_leading_separator << ' ' << :ala << "ma" << ' ' << 'kota' << nil << ' ', ", ,ala,ma, ,kota,, "
-  	assert_equal @space_allow_blank_and_leading_separator << ' ' << :ala << "ma" << ' ' << 'kota' << nil << ' ', " , ,ala,ma, ,kota,, "
+  	assert_equal @empty_allow_blank_and_leading_separator << ' ' << :lala << "loves" << ' ' << 'me!' << nil << ' ', ", ,lala,loves, ,me!,, "
+  	assert_equal @space_allow_blank_and_leading_separator << ' ' << :lala << "loves" << ' ' << 'me!' << nil << ' ', " , ,lala,loves, ,me!,, "
   end
 
   # def test_replace_with_space

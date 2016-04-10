@@ -20,9 +20,9 @@ Or install it yourself as:
 
 ## Usage
 
-	StringJoiner.new << ' ' << :ala << "ma" << ' ' << 'kota' << nil << ' ' # => "ala, ma, kota"
+	StringJoiner.new << ' ' << :lala << "loves" << ' ' << 'me!' << nil << ' ' # => "lala, loves, me!"
 
-	StringJoiner.new(' ', ',', allow_blanks: true, allow_leading_separator: true) << ' ' << :ala << "ma" << ' ' << 'kota' << nil << ' ', " , ,ala,ma, ,kota,, "
+	StringJoiner.new(' ', ',', allow_blanks: true, allow_leading_separator: true) << ' ' << :lala << "loves" << ' ' << 'me!' << nil << ' ', " , ,lala,loves, ,me!,, "
 
 Also take a peek at tests.
 
