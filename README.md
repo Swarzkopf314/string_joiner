@@ -26,8 +26,8 @@ Or install it yourself as:
 
 Also take a peek at tests.
 
-- If you want to convert your StringJoiner instance to a regular String, just call `to_s` on it.
-- Note, that StringJoiner does not override String#concat nor String#+. You can monkey patch this if you wish (just delegating these two to <<) 
+- If you want to convert your `StringJoiner` instance to a regular `String`, just call `to_s` on it.
+- Note, that `StringJoiner` does not override `String#concat` nor `String#+`. You can monkey patch this if you wish (just delegating these two to `<<`) 
 
 ## Development
 
