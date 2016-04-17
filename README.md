@@ -20,14 +20,18 @@ Or install it yourself as:
 
 ## Usage
 
+
+```ruby
 	StringJoiner.new << ' ' << :lala << "loves" << ' ' << 'me!' << nil << ' ' # => "lala, loves, me!"
 
 	StringJoiner.new('', ',', allow_blanks: true, allow_leading_separator: true) << ' ' << :lala << "loves" << ' ' << 'me!' << nil << ' ' # => ", ,lala,loves, ,me!,, "
+```
 
 Also take a peek at tests.
 
 - If you want to convert your `StringJoiner` instance to a regular `String`, just call `to_s` on it.
-- Note, that `StringJoiner` does not override `String#concat` nor `String#+`. You can monkey patch this if you wish (just delegating these two to `<<`) 
+- Note, that `StringJoiner` does not override `String#concat` nor `String#+`. You can monkey patch this if you wish (just delegating these two to `<<`)
+- It also doesn't strip provided strings, i. e. `StringJoiner.new << " lala \n\t " # => " lala \n\t "`
 
 ## Development
 
